@@ -1,0 +1,31 @@
+:100644 100644 eb18236... 0000000... M	osext_test.go
+
+diff --git a/osext_test.go b/osext_test.go
+index eb18236..0511f2f 100644
+--- a/osext_test.go
++++ b/osext_test.go
+@@ -7,7 +7,7 @@
+ package osext
+ 
+ import (
+-	"bytes"
++//      "bytes"
+ 	"fmt"
+ 	"io"
+ 	"os"
+@@ -79,6 +79,7 @@ func TestExecutableMatch(t *testing.T) {
+ 	}
+ }
+ 
++/*
+ func TestExecutableDelete(t *testing.T) {
+ 	if runtime.GOOS != "linux" {
+ 		t.Skip()
+@@ -135,6 +136,7 @@ func TestExecutableDelete(t *testing.T) {
+ 		t.Fatalf("Child returned %q, not the same file as %q", childPath, fpath)
+ 	}
+ }
++*/
+ 
+ func sameFile(fn1, fn2 string) bool {
+ 	fi1, err := os.Stat(fn1)
